@@ -7,11 +7,14 @@
 struct DigitAnimation {
     const byte* animation;
     int frames;
-    int index;
-    unsigned long lastUpdate;
 
     DigitAnimation(const byte* anim, int len)
-        : animation(anim), frames(len), index(0), lastUpdate(0) {}
+        : animation(anim), frames(len) {}
+};
+
+struct InternalAnimState {
+  int index = 0;
+  unsigned long lastUpdate = 0;
 };
 
 struct Animation {
@@ -30,15 +33,22 @@ public:
     ~HC595Plus();
 
     void begin();
-    void displayChar(char c, int pos);
-    void displayText(const char* str, int offset);
-    void displayDigitAnimation(DigitAnimation& anim, int offset, int speed);
-    void displaySegmentAnimation(Animation& anim, int speed);
+    void displayTxt(const char* str, int offset = 0);
+    void displayNumber(float num, int offset = 0, int decimal = -1);
+    void displayAnimateDig(DigitAnimation& anim, int offset = 0, int speed = 100);
+    void displayAnimate(Animation& anim, int speed = 100);
 
     static byte charToSegments(char c);
 
 private:
     ShiftRegister74HC595<2>* _sr;
+    static const int MAX_ANIMATIONS = 8;
+    struct AnimationSlot {
+        DigitAnimation* anim;
+        int offset;
+        InternalAnimState state;
+    } slots[MAX_ANIMATIONS];
+    void refreshDisplay(const char* strlength, int length, int char_offset);
 };
 
 extern const byte segmentDigits[39];
