@@ -84,4 +84,4 @@ display.displayAnimate(swipe, 50); // DigitAnimation object, speed (ms)
 ```
 \
 Tested with [Duinotec 8 Digit 7 Segment Display](https://www.jaycar.com.au/arduino-compatible-8-digit-7-segment-display/p/XC3714?srsltid=AfmBOop9T8EvsVPwGqQq3cXnKH6dCJ4oXV07JPoionLpyZuc56vtna2L)  
-This Library built on top of the [ShiftRegister74HC595 Library](https://github.com/Simsso/ShiftRegister74HC595/tree/master) by [Simsso](https://github.com/Simsso)
+This Library built on top of the [ShiftRegister74HC595 Library](https://github.com/Simsso/ShiftRegister74HC595/tree/master) by [Timo Denk](https://github.com/Simsso) (MIT).
