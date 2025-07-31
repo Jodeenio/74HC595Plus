@@ -60,7 +60,7 @@ display.displayAnimateDig(load1); // DigitAnimation object, default offset, defa
 display.displayAnimateDig(load1, 4); // DigitAnimation object, offset, default speed (100 ms)
 display.displayAnimateDig(load1, 7, 50); // DigitAnimation object, offset, speed (ms)
 ```
-### Animate Digits
+### Animate Whole Screen
 Can be called with minimum of 1 parameter. 2 optional parameters can be given; the *offset* from the **<ins>right of display</ins>** and the *speed* the animation plays at.  
 \
 Animation sequences are stored as **2D const byte arrays**. The first value is the **segment data** (same as DigitAnimation) and the second is the **digit** to display the data on. An **Animation** constructor with the array name and size is reqired.
