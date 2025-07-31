@@ -4,6 +4,7 @@ Simple feature-rich 8 Digit 7-segment display driver for dual 74HC595 shift regi
 ## Setup
 Setup is simple and straight forward
 ### Add Library to Arduino IDE
+Install in Arduino IDE Library Manager or:\
 **[Download 74HC595Plus](https://github.com/Jodeenio/74HC595Plus/archive/refs/heads/main.zip) Library**  
 Install in Arduino IDE: Click **Sketch > Include Library > Add .ZIP Library...** Select Library file, Done.  
 Manual Install: Unzip Library file, locate Arduino library folder, place unzipped file in folder. Done.
@@ -17,12 +18,12 @@ HC595Plus display(12, 11, 10);  // data, clock, latch
 The "display" object can be named anything you wish eg. d1(data, clock, latch).
 
 ## Examples
-Multiple example sketches can be found in the library files or Arduino IDE showcasing the flexability and ease of control over your 7 segment display.  
-These include:  
-**[Text and Number](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/TextAndNumbers/TextAndNumbers.ino)**  
-**[Animation of a single digit](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/SingleDigitAnimation/SingleDigitAnimation.ino)**  
-**[Whole display Animations](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/WholeDisplayAnimation/WholeDisplayAnimation.ino)**  
+Multiple example sketches can be found in the library files or Arduino IDE showcasing the flexability and ease of control over your 7 segment display. Example sketches can be accessed in Arduino IDE: **File > Examples > 74HC595Plus**
 
+These include:  
+**[Text and Number](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/TextAndNumbers/TextAndNumbers.ino)**\
+**[Animation of a single digit](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/SingleDigitAnimation/SingleDigitAnimation.ino)**\
+**[Whole display Animations](https://github.com/Jodeenio/74HC595Plus/blob/main/Example/WholeDisplayAnimation/WholeDisplayAnimation.ino)**
 ## Functions
 ### Display Text
 Can be called with minimum of 1 parameter. Optional parameter is the **offset from the <ins>right of display</ins>**.
@@ -84,4 +85,4 @@ display.displayAnimate(swipe, 50); // DigitAnimation object, speed (ms)
 ```
 \
 Tested with [Duinotec 8 Digit 7 Segment Display](https://www.jaycar.com.au/arduino-compatible-8-digit-7-segment-display/p/XC3714?srsltid=AfmBOop9T8EvsVPwGqQq3cXnKH6dCJ4oXV07JPoionLpyZuc56vtna2L)  
-This Library built on top of the [ShiftRegister74HC595 Library](https://github.com/Simsso/ShiftRegister74HC595/tree/master) by [Timo Denk](https://github.com/Simsso) (MIT).
+This Library has been built on top of the [ShiftRegister74HC595 Library](https://github.com/Simsso/ShiftRegister74HC595/tree/master) by [Timo Denk](https://github.com/Simsso) (MIT).
